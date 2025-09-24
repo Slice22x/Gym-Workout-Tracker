@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewScreens.NewExerciseScreen">
+
+    <TextView
+        android:id="@+id/tvExerciseRecent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Recent:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvExerciseChange"
+        app:layout_constraintTop_toBottomOf="@+id/tvExerciseChange" />
+
+    <EditText
+        android:id="@+id/etExerciseRecent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="Enter Weight"
+        android:inputType="number|numberDecimal"
+        android:numeric="decimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExerciseRecent"
+        app:layout_constraintStart_toEndOf="@+id/tvExerciseRecent"
+        app:layout_constraintTop_toTopOf="@+id/tvExerciseRecent" />
+
+    <TextView
+        android:id="@+id/tvExerciseChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Change By:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvExerciseRange"
+        tools:layout_editor_absoluteX="7dp" />
+
+    <EditText
+        android:id="@+id/etExerciseChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="4"
+        android:hint="Enter Weight"
+        android:inputType="number|numberDecimal"
+        android:numeric="decimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExerciseChange"
+        app:layout_constraintStart_toEndOf="@+id/tvExerciseChange"
+        app:layout_constraintTop_toTopOf="@+id/tvExerciseChange" />
+
+    <TextView
+        android:id="@+id/tvExerciseRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Range:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvExerciseChange"
+        app:layout_constraintTop_toBottomOf="@+id/tvExerciseWeight" />
+
+    <EditText
+        android:id="@+id/etExerciseRangeMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="3"
+        android:hint="Min"
+        android:inputType="number"
+        android:numeric="integer"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExerciseRange"
+        app:layout_constraintStart_toEndOf="@+id/tvExerciseRange"
+        app:layout_constraintTop_toTopOf="@+id/tvExerciseRange" />
+
+    <EditText
+        android:id="@+id/etExerciseRangeMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:hint="Max"
+        android:inputType="number"
+        android:numeric="integer"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etExerciseRangeMin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@+id/etExerciseRangeMin"
+        app:layout_constraintTop_toTopOf="@+id/etExerciseRangeMin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etExerciseWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="Enter Weight"
+        android:inputType="number|numberDecimal"
+        android:numeric="decimal"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExerciseWeight"
+        app:layout_constraintStart_toEndOf="@+id/tvExerciseWeight"
+        app:layout_constraintTop_toTopOf="@+id/tvExerciseWeight" />
+
+    <TextView
+        android:id="@+id/tvExerciseWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Weight:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvExerciseRange"
+        app:layout_constraintTop_toBottomOf="@+id/tvExerciseName" />
+
+    <TextView
+        android:id="@+id/tvExerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Name:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvExerciseWeight"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewExercise" />
+
+    <EditText
+        android:id="@+id/etExerciseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExerciseName"
+        app:layout_constraintStart_toEndOf="@+id/tvExerciseName"
+        app:layout_constraintTop_toTopOf="@+id/tvExerciseName"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <TextView
+        android:id="@+id/tvNewExercise"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="New Exersice:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btSaveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#00C853"
+        android:text="SAVE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="7.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btCancelButton" />
+
+    <Button
+        android:id="@+id/btCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#E53935"
+        android:text="CANCEL"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="7.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvExists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="@+id/etExerciseName"
+        app:layout_constraintStart_toStartOf="@+id/etExerciseName"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseName" />
+
+    <TextView
+        android:id="@+id/tvCurrentUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Unit: Lbs"
+        android:textColor="#8F8E8E8E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btCancelButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

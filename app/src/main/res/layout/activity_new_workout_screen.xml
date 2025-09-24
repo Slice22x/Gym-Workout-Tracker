@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewScreens.NewWorkoutScreen">
+
+    <TextView
+        android:id="@+id/tvWorkoutIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Icon:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvWorkoutName"
+        app:layout_constraintTop_toBottomOf="@+id/tvWorkoutName" />
+
+    <ImageButton
+        android:id="@+id/btWorkoutIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_weight="0"
+        android:backgroundTint="#00000000"
+        android:paddingHorizontal="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWorkoutIcon"
+        app:layout_constraintStart_toEndOf="@+id/tvWorkoutIcon"
+        app:layout_constraintTop_toTopOf="@+id/tvWorkoutIcon"
+        app:srcCompat="@drawable/cell_border" />
+
+    <TextView
+        android:id="@+id/tvExists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="@+id/etWorkoutName"
+        app:layout_constraintStart_toStartOf="@+id/etWorkoutName"
+        app:layout_constraintTop_toBottomOf="@+id/etWorkoutName" />
+
+    <Button
+        android:id="@+id/btAddExButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#43A047"
+        android:text="ADD EXERCISE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="7.5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWorkoutExercises"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvWorkoutExercises"
+        app:layout_constraintTop_toTopOf="@+id/tvWorkoutExercises" />
+
+    <TextView
+        android:id="@+id/tvWorkoutExercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Exercises:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWorkoutIcon" />
+
+    <EditText
+        android:id="@+id/etWorkoutName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvWorkoutName"
+        app:layout_constraintStart_toEndOf="@+id/tvWorkoutName"
+        app:layout_constraintTop_toTopOf="@+id/tvWorkoutName" />
+
+    <TextView
+        android:id="@+id/tvWorkoutName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Name:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewWorkout" />
+
+    <TextView
+        android:id="@+id/tvNewWorkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="New Workout:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btSaveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#00C853"
+        android:text="SAVE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="7.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btCancelButton" />
+
+    <Button
+        android:id="@+id/btCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#E53935"
+        android:text="CANCEL"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="7.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvExercisesHolder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btSaveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btAddExButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:elevation="10dp">
+
+    <TextView
+        android:id="@+id/tvCreateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Create:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btNewExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-100dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FF5252"
+        android:text="New Exercise"
+        android:textStyle="bold"
+        app:cornerRadius="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCreateText"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreateText" />
+
+    <Button
+        android:id="@+id/btNewWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#448AFF"
+        android:text="New Workout"
+        android:textStyle="bold"
+        app:cornerRadius="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvCreateText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btNewExercise"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreateText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
